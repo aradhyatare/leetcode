@@ -5,13 +5,13 @@ nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,
 # nums.sort()
 # print(dusri_list)
 loop_range = len(nums)
-if loop_range > 10:
-    nums = set(nums)
-    loop_range= max(nums)
-print(max(nums))
+# if loop_range > 10:
+nums = set(nums)
+    # loop_range= max(nums)
+# print(max(nums))
 
 answer = []
-for i in range(1,loop_range + 2):
+for i in range(1,loop_range + 1):
     if i not in nums:
         answer.append(i)
 print(answer)
