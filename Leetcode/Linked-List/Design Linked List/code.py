@@ -102,20 +102,18 @@ class MyLinkedList:
             curr = curr.next
 
 
-List1 = ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get","get","deleteAtIndex","deleteAtIndex","get","deleteAtIndex","get"]
-List2 = [[],[1],[3],[1,2],[1],[1],[1],[3],[3],[0],[0],[0],[0]]
-# obj = MyLinkedList()
-for i in range(1,len(List1)):
-    operations = List1[i]
-    values = '(' + str(List2[i][0]) + ')'
-    statement = 'obj.' + operations + values
-    print(statement)
-    print("obj.printlist()")
-    # print(f"The operation is {statement} and the value is {obj.printlist()}")
-    # obj.statement
-    # print(f"The operation is {statement} and the value is {obj.printlist()}")
+# List1 = ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get","get","deleteAtIndex","deleteAtIndex","get","deleteAtIndex","get"]
+# List2 = [[],[1],[3],[1,2],[1],[1],[1],[3],[3],[0],[0],[0],[0]]
 
-        
+
+# The code to get function names
+# for i in range(1,len(List1)):
+#     operations = List1[i]
+#     values = '(' + str(List2[i][0]) + ')'
+#     statement = 'obj.' + operations + values
+#     print(statement)
+#     print("obj.printlist()")
+         
 # 
 # ["MyLinkedList","addAtHead","addAtHead","addAtHead","addAtIndex","deleteAtIndex","addAtHead","addAtTail","get","addAtHead","addAtIndex","addAtHead"]
 # [[],[7],[2],[1],[3,0],[2],[6],[4],[4],[4],[5,0],[6]]
@@ -130,73 +128,6 @@ for i in range(1,len(List1)):
 # Your MyLinkedList object will be instantiated and called as such:
 obj = MyLinkedList()
 param_1 = obj.get(1)
-obj.addAtHead(1)
-obj.printlist()
-obj.addAtTail(3)
-obj.printlist()
-obj.addAtIndex(1,2)
-obj.printlist()
-obj.get(1)
-obj.printlist()
-obj.deleteAtIndex(1)
-obj.printlist()
-obj.get(1)
-obj.printlist()
-obj.get(3)
-obj.printlist()
-obj.deleteAtIndex(3)
-obj.printlist()
-obj.deleteAtIndex(0)
-# obj.printlist()
-obj.get(0)
-# obj.printlist()
-obj.deleteAtIndex(0)
-# obj.printlist()
-obj.get(0)
-# obj.printlist()
-# obj.addAtHead(4)
-# obj.printlist()
-# obj.get(1)
-# obj.printlist()
-# obj.addAtHead(1)
-# obj.printlist()
-# obj.addAtHead(5)
-# obj.printlist()
-# obj.deleteAtIndex(3)
-# obj.printlist()
-# obj.addAtHead(7)
-# obj.printlist()
-# obj.get(3)
-# obj.printlist()
-# obj.get(3)
-# obj.printlist()
-# obj.get(3)
-# obj.printlist()
-# obj.addAtHead(1)
-# obj.printlist()
-# obj.deleteAtIndex(4)
-# obj.printlist()
-# obj.addAtTail
-# obj.addAtIndex(0,10)
-# obj.addAtIndex(0,20)
-# obj.addAtIndex(1,30)
-# obj.printlist()
-# print(obj.get(0))
-# obj.addAtHead(7)
-# obj.addAtHead(2)
-# obj.addAtHead(1)
-# obj.addAtIndex(3,0)
-# obj.printlist()
-# obj.deleteAtIndex(2)
-# obj.printlist()
-# obj.addAtHead(6)
-# obj.addAtTail(4)
-# obj.printlist()
-# obj.get(4)
-# obj.addAtHead(4)
-# obj.addAtIndex(5,0)
-# obj.addAtHead(5)
-
 # print(f"Printing list before deleting it {obj.printlist()}", end=" ")
 # obj.addAtTail(3)
 # # obj.printlist()
