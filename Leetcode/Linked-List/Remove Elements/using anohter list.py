@@ -7,22 +7,17 @@ class ListNode:
 class Solution:
     def removeElements(self, head: ListNode, val: int) -> ListNode:
 
-        while head and head.val == val:
-            head = head.next
-        
-        if not head:
-            return head
-        
-        prev = head
-        curr = head.next
+        dummy=ListNode(next=head)
+        prev=dummy
+        curr=head
         
         while curr:
+            nxt=curr.next
             if curr.val == val:
-                prev.next = curr.next
+                prev.next=nxt
             else:
-                prev = curr
-            curr = curr.next
-        
-        return head
+                prev=curr
+            curr=curr.next
+        return dummy.next
 
         
