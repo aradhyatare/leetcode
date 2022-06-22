@@ -5,15 +5,16 @@ class ListNode:
 
 class Solution:
     def oddEvenList(self, head: ListNode, val: int) -> ListNode:
-        temp, prev= head
-        i = 1
-        while (temp.next):
-            if i % 2 == 0:
-                curr = temp
-                prev.next = temp.next
-                prev = prev.next
-            i = i + 1
-            temp = temp.next
+        odd = head
+        even = head.next
+        evenHead = even
+         
+        while (even != None and even.next != None):
+                odd.next = even.next
+                odd = odd.next
+                even.next = odd.next
+                even = even.next
+        odd.next = evenHead
         return head
             
         
