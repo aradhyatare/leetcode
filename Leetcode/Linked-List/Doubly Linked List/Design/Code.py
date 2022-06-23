@@ -1,4 +1,4 @@
-from hashlib import new
+import gc
 
 
 class Node:
@@ -84,6 +84,41 @@ class LinkedList:
             print(" {}".format(temp.data))
             temp = temp.next
 
+    def deleteNode(self, dele):
+
+        if self.head is None or dele is None:
+            return
+
+        if self.head == dele:
+            self.head = dele.next
+
+        if dele.next is not None:
+            dele.next.prev = dele.prev
+
+        if dele.prev is not None:
+            dele.prev.next = dele.next
+
+        gc.collect()
+
+    def remove(self):
+        if self.head is None:
+            return
+        
+        if self.head.next is not None:
+            self.head = self.head.next
+            self.head.prev = None
+
+    def pop(self):
+        if self.head is not None:
+            if self.head.next is None:
+                self.head = None
+            else:
+                temp = self.head
+                while(temp.next.next != None):
+                    temp = temp.next
+                # lastNode = temp.next
+                temp.next = None
+                # lastNode = None
 
 Myobject = LinkedList()
 Myobject.append(1)
@@ -95,7 +130,15 @@ Myobject.append(6)
 Myobject.insertAfter(Myobject.head.next,11)
 Myobject.insertBefore(Myobject.head,20)
 Myobject.printList()
-
+print("deleting the node")
+Myobject.deleteNode(Myobject.head.next.next.next.next.next.next.next)
+Myobject.printList()
+print("Removing the first node")
+Myobject.remove()
+Myobject.printList()
+print("Removing the Last node")
+Myobject.pop()
+Myobject.printList()
 
          
         
