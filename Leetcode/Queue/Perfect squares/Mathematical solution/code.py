@@ -5,7 +5,7 @@ class Solution:
         
         while (n%4 == 0):
             n /= 4
-        if (n % 8 ==7):
+        if (n % 8 ==7): #4**K*(8n + 7)
             return 4
         
         if (self.is_perfect(n)):
